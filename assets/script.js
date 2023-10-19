@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var passLength = prompt("enter password length")
+
 var passCharacter = confirm("Would you like special characters? ")
 var passNumbers = confirm("Would you like numbers? ")
 var passUpper = confirm("Would you like upper case characters? ")
@@ -10,7 +10,11 @@ var passLower = confirm("Would you like lower case characters? ")
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  passLength = prompt("Enter password length, 8 - 128 characters possible:")
+  if ( passLength < 8 || passLength > 128) {
+    alert("Invalid Length, Password must be between 8 and 128 characters.")
+    return;
+  }
   passwordText.value = password;
 
 }
