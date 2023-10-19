@@ -1,10 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var passCharacter = confirm("Would you like special characters? ")
-var passNumbers = confirm("Would you like numbers? ")
-var passUpper = confirm("Would you like upper case characters? ")
-var passLower = confirm("Would you like lower case characters? ")
+
 
 // Write password to the #password input
 function writePassword() {
@@ -16,8 +13,13 @@ function writePassword() {
     return;
   }
   passwordText.value = password;
+  var passCharacter = confirm("Would you like special characters? ")
+  var passNumbers = confirm("Would you like numbers? ")
+  var passUpper = confirm("Would you like upper case characters? ")
+  var passLower = confirm("Would you like lower case characters? ")
 
-}
+
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
