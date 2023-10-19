@@ -19,7 +19,11 @@ function writePassword() {
   var passLower = confirm("Would you like lower case characters? ")
 
 
-  
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numericChars = "0123456789";
+  var specialChars = "!@#$%^&*()_+";
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
