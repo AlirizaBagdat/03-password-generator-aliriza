@@ -17,7 +17,10 @@ function writePassword() {
   var passNumbers = confirm("Would you like numbers? ")
   var passUpper = confirm("Would you like upper case characters? ")
   var passLower = confirm("Would you like lower case characters? ")
-
+  
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("You must include at least one character type.");
+    return;
 
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
